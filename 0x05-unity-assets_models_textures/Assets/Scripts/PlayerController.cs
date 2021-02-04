@@ -16,12 +16,12 @@ public class PlayerController : MonoBehaviour {
 	// The height we respawn the player at
 	public float respawn_height;
 	public float kill_height;
-
+	
 	// Use this for initialization
 	void Start () {
 		player = GetComponent<Rigidbody>();
 	}
-	
+
 	void Update() {
 
 		// If the player falls off a platform, respawn them

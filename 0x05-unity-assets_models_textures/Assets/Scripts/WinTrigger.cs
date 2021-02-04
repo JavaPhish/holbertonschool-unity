@@ -12,5 +12,4 @@ public class WinTrigger : MonoBehaviour {
 		collision.gameObject.GetComponent<Timer>().TimerText.fontSize = 80;
 		collision.gameObject.GetComponent<Timer>().TimerText.color = Color.green;
     }
-
 }
