@@ -425,7 +425,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1779738541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,11 +439,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   jumpForce: 200
+  respawn_height: 10
+  kill_height: -30
 --- !u!4 &1779738545 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286263778823128, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
     type: 2}
   m_PrefabInternal: {fileID: 2087374802}
+--- !u!114 &1779738546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779738539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd989bcccb3ac646a12d3501f886468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1866380070
 GameObject:
   m_ObjectHideFlags: 0

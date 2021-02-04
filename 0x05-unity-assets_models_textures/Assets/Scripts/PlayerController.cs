@@ -13,11 +13,26 @@ public class PlayerController : MonoBehaviour {
 	// The rigidbody of the player (Used to apply force to the rigidbody comp)
 	private Rigidbody player;
 
+	// The height we respawn the player at
+	public float respawn_height;
+	public float kill_height;
+
 	// Use this for initialization
 	void Start () {
 		player = GetComponent<Rigidbody>();
 	}
 	
+	void Update() {
+
+		// If the player falls off a platform, respawn them
+		if (transform.position.y < kill_height)
+		{
+			player.velocity = Vector3.zero;
+			transform.position = new Vector3(0, respawn_height, 0);
+		}
+	
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 
