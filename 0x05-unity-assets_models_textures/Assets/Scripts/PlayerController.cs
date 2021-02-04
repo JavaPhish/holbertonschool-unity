@@ -24,27 +24,27 @@ public class PlayerController : MonoBehaviour {
 		// Jump (Space)
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			player.AddForce(0, jumpForce, 0);
+			player.AddRelativeForce(0, jumpForce, 0);
 		}
 
 		// UP (W)
 		if (Input.GetKey(KeyCode.W)) {
-			player.AddForce(0, 0, speed);
+			player.AddRelativeForce(0, 0, speed);
 		}
 
 		// DOWN (S)
 		if (Input.GetKey(KeyCode.S)) {
-			player.AddForce(0, 0, speed * -1);
+			player.AddRelativeForce(0, 0, speed * -1);
 		}
 
 		// RIGHT (D)
 		if (Input.GetKey(KeyCode.D)) {
-			player.AddForce(speed, 0, 0);
+			player.AddRelativeForce(speed, 0, 0);
 		}
 
 		// LEFT (A)
 		if (Input.GetKey(KeyCode.A)) {
-			player.AddForce(speed * -1, 0, 0);
+			player.AddRelativeForce(speed * -1, 0, 0);
 		}
 	}
 }
