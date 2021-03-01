@@ -8,6 +8,6 @@ public class TimerTrigger : MonoBehaviour {
     {
 		// Activate the timer and destroy the trigger (it has a collider on it)
         other.gameObject.GetComponent<Timer>().enabled = true;
-		Destroy(gameObject);
+		    Destroy(gameObject);
     }
 }
