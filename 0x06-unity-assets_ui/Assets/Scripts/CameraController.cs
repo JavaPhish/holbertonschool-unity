@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class CameraController : MonoBehaviour {
 
@@ -11,9 +13,10 @@ public class CameraController : MonoBehaviour {
 	
 	float x, y;
 	
-	public bool isInverted = false;
+	public bool isInverted;
 
 	void Start () {
+		isInverted = Convert.ToBoolean(PlayerPrefs.GetInt("isInverted"));
 		transform.SetParent(camAnchor);
 	}
 

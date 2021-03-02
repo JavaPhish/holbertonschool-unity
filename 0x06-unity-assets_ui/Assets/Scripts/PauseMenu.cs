@@ -20,6 +20,11 @@ public class PauseMenu : MonoBehaviour {
 		}
 	}
 
+	public void Restart()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
+
 	public void Pause()
 	{
 		// Disable timer
