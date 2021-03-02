@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 223843646801558104}
   - component: {fileID: 114796462205351010}
   - component: {fileID: 114593198844826586}
+  - component: {fileID: 114439963771383412}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -135,7 +136,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1776142016393656
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -266,7 +267,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114255092599340218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114439963771383412}
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114208588530031260
@@ -323,6 +335,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114439963771383412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403282275749300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3381fdb9c054f42bc522d0978e8b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114528846379607952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -538,7 +561,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114085965016117940}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114439963771383412}
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!222 &222225171729702230
@@ -692,12 +726,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224593351988656170}
-  m_RootOrder: 1
+  m_Father: {fileID: 224999519466450658}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 244.76636, y: 200}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224570646208898450
@@ -730,7 +764,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224131845829840548}
-  - {fileID: 224533061121318960}
   m_Father: {fileID: 224999519466450658}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -771,6 +804,7 @@ RectTransform:
   - {fileID: 224250435010930276}
   - {fileID: 224570646208898450}
   - {fileID: 224593351988656170}
+  - {fileID: 224533061121318960}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

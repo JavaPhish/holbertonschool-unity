@@ -9,6 +9,8 @@ public class Timer : MonoBehaviour {
 	public Text TimerText;
 	private float timer;
 	private float minutes, seconds;
+
+	public Text winText;
 	// Update is called once per frame
 	void Update () {
 		
@@ -16,5 +18,10 @@ public class Timer : MonoBehaviour {
 		minutes = Mathf.FloorToInt(timer / 60f);
 		seconds =  timer - minutes * 60;
 		TimerText.text = string.Format("{0:0}:{1:00.00}", minutes, seconds);
+	}
+
+	public void Win()
+	{
+		winText.text = string.Format("{0:0}:{1:00.00}", minutes, seconds);
 	}
 }
