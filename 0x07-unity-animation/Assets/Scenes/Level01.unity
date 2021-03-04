@@ -3613,6 +3613,11 @@ Prefab:
       propertyPath: winText
       value: 
       objectReference: {fileID: 397291799}
+    - target: {fileID: 95065048636784736, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6deb995c20bc7b2489a1a0d14a4c4b66, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6d2093ea0094614195b1c2e4d2e4b0c, type: 2}
   m_IsPrefabParent: 0
