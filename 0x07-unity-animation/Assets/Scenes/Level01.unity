@@ -2805,6 +2805,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4286263778823128, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
     type: 2}
   m_PrefabInternal: {fileID: 2087374802}
+--- !u!143 &1779738547
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779738539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2.1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1803646114 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 7e1f28ae88641364ea73b07b4c7dcfe6, type: 3}
@@ -3618,7 +3635,32 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6deb995c20bc7b2489a1a0d14a4c4b66, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 114454212266235324, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
+        type: 2}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1779738547}
+    - target: {fileID: 114454212266235324, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
+        type: 2}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114454212266235324, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
+        type: 2}
+      propertyPath: jumpForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400971231569024, guid: b6d2093ea0094614195b1c2e4d2e4b0c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 136002560751852404, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 54640990270096196, guid: b6d2093ea0094614195b1c2e4d2e4b0c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b6d2093ea0094614195b1c2e4d2e4b0c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2101666310 stripped

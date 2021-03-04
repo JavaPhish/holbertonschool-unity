@@ -5,61 +5,56 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	// How quickly the player can move.
-	public float speed = 25;
+	public float speed = 3.0f;
 
 	// How high a player jumps
-	public float jumpForce = 200;
+	public float jumpForce = 2.0f;
 
-	// The rigidbody of the player (Used to apply force to the rigidbody comp)
-	private Rigidbody player;
+	public CharacterController controller;
+
+	private Vector3 velocity;
+
+	private bool onGround;
+
+	public float gravity_force = 15f;
 
 	// The height we respawn the player at
 	public float respawn_height;
 	public float kill_height;
 	
-	// Use this for initialization
-	void Start () {
-		player = GetComponent<Rigidbody>();
-	}
 
-	void Update() {
 
-		// If the player falls off a platform, respawn them
-		if (transform.position.y < kill_height)
-		{
-			player.velocity = Vector3.zero;
-			transform.position = new Vector3(0, respawn_height, 0);
-		}
-	
-	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
-
-		// Jump (Space)
-		if (Input.GetKeyDown(KeyCode.Space))
+		onGround = controller.isGrounded;
+		// If the player falls off a platform, respawn them
+		if (transform.position.y < kill_height)
 		{
-			player.AddRelativeForce(0, jumpForce, 0);
+			velocity = Vector3.zero;
+			transform.position = new Vector3(0, respawn_height, 0);
 		}
 
-		// UP (W)
-		if (Input.GetKey(KeyCode.W)) {
-			player.AddRelativeForce(0, 0, speed);
+		if (onGround)
+		{
+			velocity.y = 0f;
 		}
 
-		// DOWN (S)
-		if (Input.GetKey(KeyCode.S)) {
-			player.AddRelativeForce(0, 0, speed * -1);
+		Vector3 player_move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+		controller.Move(player_move * Time.deltaTime * speed);
+
+		if (player_move != Vector3.zero)
+		{
+			gameObject.transform.forward = player_move;
 		}
 
-		// RIGHT (D)
-		if (Input.GetKey(KeyCode.D)) {
-			player.AddRelativeForce(speed, 0, 0);
+		//gravity...
+		if (Input.GetButtonDown("Jump") && onGround)
+		{
+			velocity.y += Mathf.Sqrt(jumpForce * -3.0f * -gravity_force);
 		}
 
-		// LEFT (A)
-		if (Input.GetKey(KeyCode.A)) {
-			player.AddRelativeForce(speed * -1, 0, 0);
-		}
+		velocity.y -= gravity_force * Time.deltaTime;
+		controller.Move(velocity * Time.deltaTime);
 	}
 }

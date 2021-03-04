@@ -22,15 +22,15 @@ public class CameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {
-		x += Input.GetAxis("Mouse X") * sensitivity;
+		//x += Input.GetAxis("Mouse X") * sensitivity;
 		y += Input.GetAxis("Mouse Y") * sensitivity;
 		
 		transform.LookAt(player);
-		player.rotation = Quaternion.Euler(0, x, 0);
+		//player.rotation = Quaternion.Euler(0, x, 0);
 
 		if (isInverted)
-			camAnchor.rotation = Quaternion.Euler(-y, x, 0);
+			camAnchor.rotation = Quaternion.Euler(-y, 0, 0);
 		else
-			camAnchor.rotation = Quaternion.Euler(y, x, 0);
+			camAnchor.rotation = Quaternion.Euler(y, 0, 0);
 	}
 }
