@@ -1905,6 +1905,7 @@ GameObject:
   - component: {fileID: 901729129}
   - component: {fileID: 901729128}
   - component: {fileID: 901729127}
+  - component: {fileID: 901729132}
   m_Layer: 0
   m_Name: CutsceneCamera
   m_TagString: Untagged
@@ -1992,6 +1993,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901729132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901729126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2affd617de0bd7f4bb1cf0150553ac8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 28041021}
+  player: {fileID: 1779738539}
+  timer_canvas: {fileID: 585044917}
 --- !u!1 &911119085 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: e49bfd1a5116c0f4a90a8dfcdbba7e20, type: 3}
@@ -2829,7 +2844,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779738539}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b5181b3ba616ac4ab982a7c9442ff41, type: 3}
   m_Name: 
@@ -3562,6 +3577,10 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: 8968191ee656a2045aa854ffeeecd8d0,
         type: 3}
+    - target: {fileID: 1935800277848300, guid: a801638e8d89a294da79b88c361c0a0e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a801638e8d89a294da79b88c361c0a0e, type: 2}
   m_IsPrefabParent: 0

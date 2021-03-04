@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D99EA84A-75FE-1111-FB53-77AE0B4FEB39}</ProjectGuid>
+    <ProjectGuid>{9E1AFDAB-6BF5-3B06-167E-F93597FB41DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,6 +56,7 @@
      <Compile Include="Assets\Materials\Skyboxes\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
      <Compile Include="Assets\Materials\Skyboxes\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CutsceneController.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\SceneTracker.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\TimerTrigger.cs" />
+     <Compile Include="Assets\Scripts\WinMenu.cs" />
      <Compile Include="Assets\Scripts\WinTrigger.cs" />
      <None Include="Assets\Fonts\Changa\OFL.txt" />
      <None Include="Assets\Fonts\Changa\README.txt" />
