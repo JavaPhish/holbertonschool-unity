@@ -6,23 +6,17 @@ public class PlayerController : MonoBehaviour {
 
 	// How quickly the player can move.
 	public float speed = 3.0f;
-
 	// How high a player jumps
 	public float jumpForce = 2.0f;
-
 	public CharacterController controller;
-
 	private Vector3 velocity;
-
 	private bool onGround;
-
 	public float gravity_force = 15f;
-
 	// The height we respawn the player at
 	public float respawn_height;
 	public float kill_height;
 	
-
+	public Animator ty_controller;
 
 
 	// Update is called once per frame
@@ -33,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			velocity = Vector3.zero;
 			transform.position = new Vector3(0, respawn_height, 0);
+			ty_controller.Play("FallingDown", 0, 0);
 		}
 
 		if (onGround)
@@ -41,7 +36,18 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		Vector3 player_move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+		if (player_move == Vector3.zero && onGround)
+		{
+			ty_controller.SetBool("Running", false);
+		}
+		else
+		{
+			ty_controller.SetBool("Running", true);
+		}
+
 		controller.Move(player_move * Time.deltaTime * speed);
+
 
 		if (player_move != Vector3.zero)
 		{
@@ -52,6 +58,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown("Jump") && onGround)
 		{
 			velocity.y += Mathf.Sqrt(jumpForce * -3.0f * -gravity_force);
+			ty_controller.Play("Jump", 0, 0);
 		}
 
 		velocity.y -= gravity_force * Time.deltaTime;

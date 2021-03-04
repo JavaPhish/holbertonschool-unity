@@ -1194,6 +1194,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4328127643976488, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
     type: 2}
   m_PrefabInternal: {fileID: 2087374802}
+--- !u!95 &456654077 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95065048636784736, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2087374802}
 --- !u!1001 &474071558
 Prefab:
   m_ObjectHideFlags: 0
@@ -2815,7 +2820,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.1
+  m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -3657,6 +3662,16 @@ Prefab:
     - target: {fileID: 136002560751852404, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
         type: 2}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114454212266235324, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
+        type: 2}
+      propertyPath: ty_controller
+      value: 
+      objectReference: {fileID: 456654077}
+    - target: {fileID: 95065048636784736, guid: b6d2093ea0094614195b1c2e4d2e4b0c,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
