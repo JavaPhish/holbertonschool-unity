@@ -2,10 +2,10 @@
 
 A 3d platformer featuring 3 levels
 
-<h5>Play it here!</h5>
+<h4>Play it here!</h4>
 https://drive.google.com/drive/folders/1_NSHiYzkredUMeZhGdt1pTm7kSYKOJLQ?usp=sharing
 
-Credits,
+</h4>Credits,</h4>
 
   Skybox Used: Skyboxes: Farland Skies - Cloudy Crown
   https://assetstore.unity.com/packages/2d/textures-materials/sky/farland-skies-cloudy-crown-60004
