@@ -929,9 +929,9 @@ GameObject:
   - component: {fileID: 33595491999146132}
   - component: {fileID: 136002560751852404}
   - component: {fileID: 23936162197661684}
-  - component: {fileID: 54640990270096196}
   - component: {fileID: 114454212266235324}
   - component: {fileID: 114288062628992924}
+  - component: {fileID: 143721203016470382}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1548,7 +1548,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1864125078134384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.984, z: 0}
+  m_LocalPosition: {x: 0, y: -1.033, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4723352102338470}
@@ -2213,21 +2213,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1835444224908272}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54640990270096196
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1835444224908272}
-  serializedVersion: 2
-  m_Mass: 1.1
-  m_Drag: 1
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!95 &95065048636784736
 Animator:
   serializedVersion: 3
@@ -2237,10 +2222,10 @@ Animator:
   m_GameObject: {fileID: 1864125078134384}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 29fdd33adf8b9784c8a7b3888becf131, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6deb995c20bc7b2489a1a0d14a4c4b66, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -2269,10 +2254,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b5181b3ba616ac4ab982a7c9442ff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
-  jumpForce: 200
+  speed: 10
+  jumpForce: 1
+  controller: {fileID: 143721203016470382}
+  gravity_force: 15
   respawn_height: 10
-  kill_height: -30
+  kill_height: -15
+  ty_controller: {fileID: 95065048636784736}
 --- !u!136 &136002560751852404
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2281,7 +2269,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1835444224908272}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -2806,3 +2794,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.016744789, y: 0.345741, z: -0.016019095}
     m_Extent: {x: 0.13084912, y: 0.24699917, z: 0.12203808}
   m_DirtyAABB: 0
+--- !u!143 &143721203016470382
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1835444224908272}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}

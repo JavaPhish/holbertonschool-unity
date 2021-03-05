@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 	public float gravity_force = 15f;
 	// The height we respawn the player at
 	public float respawn_height;
-	public float kill_height;
+	public float kill_height = 15f;
 	
 	public Animator ty_controller;
 
@@ -27,7 +27,13 @@ public class PlayerController : MonoBehaviour {
 		{
 			velocity = Vector3.zero;
 			transform.position = new Vector3(0, respawn_height, 0);
-			ty_controller.Play("FallingDown", 0, 0);
+			ty_controller.SetBool("isFalling", true);
+		}
+
+		if (ty_controller.GetBool("isFalling") && onGround)
+		{
+			ty_controller.SetTrigger("hitSpawn");
+			ty_controller.SetBool("isFalling", false);
 		}
 
 		if (onGround)
@@ -58,7 +64,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown("Jump") && onGround)
 		{
 			velocity.y += Mathf.Sqrt(jumpForce * -3.0f * -gravity_force);
-			ty_controller.Play("Jump", 0, 0);
+			ty_controller.SetTrigger("Jump");
 		}
 
 		velocity.y -= gravity_force * Time.deltaTime;
