@@ -1,3 +1,10 @@
+<h3>3D Platformer</h3>
+
+A 3d platformer featuring 3 levels
+
+<h5>Play it here!</h5>
+https://drive.google.com/drive/folders/1_NSHiYzkredUMeZhGdt1pTm7kSYKOJLQ?usp=sharing
+
 Credits,
 
   Skybox Used: Skyboxes: Farland Skies - Cloudy Crown
@@ -5,3 +12,5 @@ Credits,
 
   Nature pack: Skyboxes: Farland Skies - Cloudy Crown
   https://kenney.nl/assets/nature-pack-extended
+  
+  Animations and Player model - https://www.mixamo.com/
