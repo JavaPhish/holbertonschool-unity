@@ -989,7 +989,7 @@ Prefab:
     - target: {fileID: 114914297334076820, guid: 9b38ab498433aec43aafff782d39f6af,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadOptions
+      value: QuitGame
       objectReference: {fileID: 0}
     - target: {fileID: 114914297334076820, guid: 9b38ab498433aec43aafff782d39f6af,
         type: 2}
