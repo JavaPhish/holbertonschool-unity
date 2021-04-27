@@ -19,7 +19,7 @@ public class FootstepController : MonoBehaviour {
 
 	}
 
-	void playStepSound()
+	public void playStepSound()
 	{
 		if (!onGround)
 			return;
@@ -36,7 +36,7 @@ public class FootstepController : MonoBehaviour {
 
 	void OnControllerColliderHit(ControllerColliderHit hit)
     {
-		// Debug.Log(hit.gameObject.tag);
+		Debug.Log(hit.gameObject.tag);
 		floorType = hit.gameObject.tag;
     }
 }
