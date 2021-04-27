@@ -7,6 +7,7 @@ public class WinTrigger : MonoBehaviour {
 
 	public GameObject winMenu;
 	public AudioSource bgm;
+	public AudioSource victory;
 
     void OnTriggerEnter(Collider collision)
     {
@@ -19,6 +20,7 @@ public class WinTrigger : MonoBehaviour {
 		collision.gameObject.GetComponent<Timer>().Win();
 
 		bgm.Stop();
+		victory.Play();
     }
 
 }
