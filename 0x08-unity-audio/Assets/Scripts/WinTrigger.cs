@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WinTrigger : MonoBehaviour {
 
 	public GameObject winMenu;
+	public AudioSource bgm;
 
     void OnTriggerEnter(Collider collision)
     {
@@ -16,6 +17,8 @@ public class WinTrigger : MonoBehaviour {
 
 		winMenu.SetActive(true);
 		collision.gameObject.GetComponent<Timer>().Win();
+
+		bgm.Stop();
     }
 
 }
