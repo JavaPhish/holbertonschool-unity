@@ -1007,6 +1007,18 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 82377460806072730, guid: 7cbe4f4d8bebbb5439771430ed04119a,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243199460276658310, guid: 7820406e4dc0a9543935dcb7f07503e9,
+        type: 2}
+    - target: {fileID: 82831657136359074, guid: 7cbe4f4d8bebbb5439771430ed04119a,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243199460276658310, guid: 7820406e4dc0a9543935dcb7f07503e9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7cbe4f4d8bebbb5439771430ed04119a, type: 2}
   m_IsPrefabParent: 0
