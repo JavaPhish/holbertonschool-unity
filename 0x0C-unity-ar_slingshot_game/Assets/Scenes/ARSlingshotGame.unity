@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 482468927}
   - component: {fileID: 482468926}
   - component: {fileID: 482468931}
+  - component: {fileID: 482468932}
   m_Layer: 0
   m_Name: AR Plane Manager
   m_TagString: Untagged
@@ -438,8 +439,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b403515a51683414c874592b69b94b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arCamera: {fileID: 1164501358}
   searching: {fileID: 5185870}
   select: {fileID: 829659627}
+--- !u!114 &482468932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482468925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RaycastPrefab: {fileID: 0}
 --- !u!1 &738667802
 GameObject:
   m_ObjectHideFlags: 0
