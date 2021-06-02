@@ -10,6 +10,7 @@ public class UserInteractionPlane : MonoBehaviour
 
     private ARPlaneManager planes;
     private ARRaycastManager rayMan;
+    private Beans bean;
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
     public Camera arCamera;
@@ -22,6 +23,7 @@ public class UserInteractionPlane : MonoBehaviour
 
     void Start()
     {
+        bean = GetComponent<Beans>();
         planes = GetComponent<ARPlaneManager>();
         rayMan = GetComponent<ARRaycastManager>();
     }
@@ -59,7 +61,8 @@ public class UserInteractionPlane : MonoBehaviour
                 }
 
                 planes.enabled = false;
-                select.SetActive(false); 
+                select.SetActive(false);
+                bean.make_beans(2, s_plane);
             }  
         }
     }
