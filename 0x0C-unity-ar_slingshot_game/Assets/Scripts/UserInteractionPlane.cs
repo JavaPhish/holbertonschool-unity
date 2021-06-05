@@ -60,7 +60,7 @@ public class UserInteractionPlane : MonoBehaviour
                     }
                 }
 
-                //planes.enabled = false;
+                planes.enabled = false;
                 select.SetActive(false);
                 bean.make_beans(s_plane);
             }  

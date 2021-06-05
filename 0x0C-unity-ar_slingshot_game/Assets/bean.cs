@@ -5,31 +5,29 @@ using UnityEngine;
 public class bean : MonoBehaviour
 {
     
-    private int max_speed = 2;
-    private int max_distance = 1;
-    private char axis;
+    private float max_speed = 2f;
+    private float max_distance = .3f;
     private float speed;
     private float distance;
+    private Vector3 anchor;
+    private float currentAngle;
 
     void Start()
     {
-        // Randomly pick which axis to move on
-        if (Random.Range(0, 2) > 1)
-            axis = 'x';
-        else
-            axis = 'z';
-
         // Randomly decide how quickly it moves
-        speed = Random.Range(0.5f, max_speed);
+        speed = Random.Range(0.01f, max_speed);
 
         // Randomly decide how far it will move
-        distance = Random.Range(0f, max_distance);
+        distance = Random.Range(0.07f, max_distance);
+
+        anchor = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(speed * Time.deltaTime ,0 , 0);
-        transform.Rotate(speed * Time.deltaTime, 0, 0);
+        currentAngle += speed * Time.deltaTime;
+        Vector3 offset = new Vector3(Mathf.Sin(currentAngle) * distance, 0, Mathf.Cos(currentAngle) * distance);
+        transform.position = anchor + offset;            
     }
 }

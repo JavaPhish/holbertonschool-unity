@@ -9,15 +9,12 @@ public class Beans : MonoBehaviour
 {
 
     public int bean_count = 5;
-    public Text debug;
     public GameObject bean;
 
     private MeshCollider m_plane;
 
     public void make_beans(ARPlane plane)
     {
-        debug.text = (plane.boundary[0].ToString() + " \n"  + plane.boundary[1].ToString());
-
         while (bean_count > 0)
         {
             m_plane = plane.GetComponent<MeshCollider>();
