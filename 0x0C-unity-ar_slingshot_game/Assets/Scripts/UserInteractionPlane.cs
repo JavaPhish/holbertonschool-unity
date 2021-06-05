@@ -16,6 +16,7 @@ public class UserInteractionPlane : MonoBehaviour
     public Camera arCamera;
     public GameObject searching;
     public GameObject select;
+    public GameObject start_b;
 
     static ARPlane s_plane = null;
     static bool found = false;
@@ -63,6 +64,7 @@ public class UserInteractionPlane : MonoBehaviour
                 planes.enabled = false;
                 select.SetActive(false);
                 bean.make_beans(s_plane);
+                start_b.SetActive(true);
             }  
         }
     }
