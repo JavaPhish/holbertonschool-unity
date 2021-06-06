@@ -30,4 +30,12 @@ public class bean : MonoBehaviour
         Vector3 offset = new Vector3(Mathf.Sin(currentAngle) * distance, 0, Mathf.Cos(currentAngle) * distance);
         transform.position = anchor + offset;            
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Projectile")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

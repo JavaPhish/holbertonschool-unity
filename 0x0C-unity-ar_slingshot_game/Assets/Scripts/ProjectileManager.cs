@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject ammo;
+    public int ammo_count = 5;
+
+
+    private GameObject ball;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void setAmmo(int nammo)
     {
-        
+        ammo_count = nammo;
+
+        if (ammo_count <= 0)
+        {
+
+        }
     }
 }
+

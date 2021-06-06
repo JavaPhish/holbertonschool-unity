@@ -18,6 +18,8 @@ public class UserInteractionPlane : MonoBehaviour
     public GameObject select;
     public GameObject start_b;
 
+    public GameObject boundary;
+
     static ARPlane s_plane = null;
     static bool found = false;
      
@@ -60,6 +62,10 @@ public class UserInteractionPlane : MonoBehaviour
                         Destroy(plane.gameObject);
                     }
                 }
+
+                boundary.transform.position = new Vector3(s_plane.transform.position.x, s_plane.transform.position.y - 1, s_plane.transform.position.z);
+
+                boundary.SetActive(true);
 
                 planes.enabled = false;
                 select.SetActive(false);
