@@ -885,7 +885,7 @@ RectTransform:
   - {fileID: 1258160672}
   - {fileID: 1339201804}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1282,7 +1282,7 @@ RectTransform:
   - {fileID: 229916004}
   - {fileID: 1872219206}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2050,7 +2050,7 @@ RectTransform:
   - {fileID: 75201480}
   - {fileID: 1868539081}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2561,7 +2561,7 @@ RectTransform:
   - {fileID: 218678041}
   - {fileID: 1091528826}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3467,6 +3467,16 @@ PrefabInstance:
       propertyPath: score_t
       value: 
       objectReference: {fileID: 1258160673}
+    - target: {fileID: 3793357527023922446, guid: 44fd414468da6c041a071a9351fd7119,
+        type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 784562219}
+    - target: {fileID: 3793357527023922446, guid: 44fd414468da6c041a071a9351fd7119,
+        type: 3}
+      propertyPath: gamePlay
+      value: 
+      objectReference: {fileID: 548045761}
     - target: {fileID: 3793357527023922446, guid: 44fd414468da6c041a071a9351fd7119,
         type: 3}
       propertyPath: projectileManager
