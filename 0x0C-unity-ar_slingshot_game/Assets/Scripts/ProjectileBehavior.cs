@@ -21,9 +21,12 @@ public class ProjectileBehavior : MonoBehaviour
     private LineRenderer line;
     public GameManager gm;
 
+    private AudioSource AAAAA;
+
     // Start is called before the first frame update
     void Start()
     {
+        AAAAA = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         parnt = gameObject.transform.parent;
         traj = GetComponent<ProjectilePrediction>();
@@ -34,11 +37,13 @@ public class ProjectileBehavior : MonoBehaviour
     {
         if (col.gameObject.tag == "Bean")
         {
+            AAAAA.Play(0);
             gm.givePoints(10);
         }
 
         gameObject.transform.SetParent(parnt, false);
         gameObject.transform.localPosition = Vector3.zero;
+        gameObject.transform.localRotation = gameObject.transform.rotation;
         rb.isKinematic = true;
     }
 

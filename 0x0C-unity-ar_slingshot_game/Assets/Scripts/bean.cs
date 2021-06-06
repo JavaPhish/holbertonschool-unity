@@ -35,6 +35,7 @@ public class bean : MonoBehaviour
     {
         if (collision.gameObject.tag == "Projectile")
         {
+            GetComponent<AudioSource>().Play(0);
             Destroy(gameObject);
         }
     }
