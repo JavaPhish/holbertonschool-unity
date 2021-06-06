@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
 using System;
 
@@ -25,16 +28,50 @@ public class GameManager : MonoBehaviour
     public Text ammo_t;
     public int ammo = 7;
 
+    // Managers
     public GameObject projectileManager;
+    public Beans targetManager;
+
+    // ARPlane for restart persisting
+    public ARPlane arp;
 
     // Score buffers
     private int[] scores = new int[4];
 
+    public void PlayAgain()
+    {
+        // resets ammo, targets and score
+        score = 0;
+        ammo = 7;
+
+        score_t.text = "Score: " + score;
+
+        ammo_t.text = "Ammo: " + ammo;
+
+        GameObject[] gameObjects;
+        gameObjects = GameObject.FindGameObjectsWithTag("Bean");
+
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            Destroy(gameObjects[i]);
+        }
+
+        targetManager.make_beans(arp);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("ARSlingshotGame");
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
         getScores();
         score = 0;
         score_t.text = "Score: " + score;

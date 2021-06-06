@@ -20,7 +20,7 @@ public class UserInteractionPlane : MonoBehaviour
 
     public GameObject boundary;
 
-    static ARPlane s_plane = null;
+    public static ARPlane s_plane = null;
     static bool found = false;
      
 
@@ -29,6 +29,8 @@ public class UserInteractionPlane : MonoBehaviour
         bean = GetComponent<Beans>();
         planes = GetComponent<ARPlaneManager>();
         rayMan = GetComponent<ARRaycastManager>();
+
+        planes.enabled = true;
     }
 
     // Update is called once per frame
@@ -74,6 +76,5 @@ public class UserInteractionPlane : MonoBehaviour
             }  
         }
     }
-
 }
 

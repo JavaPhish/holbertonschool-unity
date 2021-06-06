@@ -10,11 +10,14 @@ public class Beans : MonoBehaviour
 
     public int bean_count = 5;
     public GameObject bean;
+    public GameManager gm;
 
     private MeshCollider m_plane;
 
     public void make_beans(ARPlane plane)
     {
+        gm.arp = plane;
+
         while (bean_count > 0)
         {
             m_plane = plane.GetComponent<MeshCollider>();
