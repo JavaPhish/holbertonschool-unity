@@ -21,8 +21,6 @@ public class ProjectileBehavior : MonoBehaviour
     private LineRenderer line;
     public GameManager gm;
 
-    public Text debug;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +34,6 @@ public class ProjectileBehavior : MonoBehaviour
     {
         if (col.gameObject.tag == "Bean")
         {
-            debug.text = "FUcking fuck ass cunt shit whore bitch";
             gm.givePoints(10);
         }
 
